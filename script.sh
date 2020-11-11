@@ -1,1 +1,2 @@
-echo "hi" >> index2.html
+#!/usr/bin/env bash
+echo "hi2" >> index2.html
