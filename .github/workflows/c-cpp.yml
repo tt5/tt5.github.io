@@ -10,9 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: DamianReeves/write-file-action@v1.0
-        with:
-          path: ./index2.html
-          contents: |
-            echo "Hello World!"
-          write-mode: append
+      - name: Checkout
+        uses: actions/checkout@v2
+
+     - name: Test
+       run: ./script.sh
