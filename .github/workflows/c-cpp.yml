@@ -9,12 +9,9 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      
+    steps:      
       - name: Test
         uses: "finnp/create-file-action@master"
-          env:
-            FILE_NAME: "fileName.txt"
-            FILE_DATA: "file content"
+        env:
+                 FILE_NAME: "fileName.txt"
+                 FILE_DATA: "file content"
