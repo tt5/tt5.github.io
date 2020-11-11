@@ -1,10 +1,8 @@
-name: C/C++ CI
+name: Makefile CI
 
 on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+  page_build
+
 
 jobs:
   build:
@@ -12,6 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: make site
+    - name: make-site
+      shell: bash
       run: make site
