@@ -5,6 +5,9 @@
   <title>tt5</title>
 </head>
 <body>
-  hi
+  <div>
+    <h1>Hi</h1>
+    <p>This is the body</p>
+  </div>
 </body>
 </html>
