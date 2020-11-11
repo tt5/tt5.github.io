@@ -1,8 +1,8 @@
 name: Makefile CI
 
 on:
-  push
-
+  push:
+    branches: [ master ]
 
 jobs:
   build:
