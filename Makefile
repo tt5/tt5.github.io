@@ -2,4 +2,4 @@
 default:
 
 site:
-	echo "hello" >> index2.html
+	m4 input > index.html
