@@ -1,0 +1,128 @@
+
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans+Mono');
+
+/*
+html, body, header, nav, main, aside, footer, p, section {
+  padding: 0;
+  margin: 0;
+}
+*/
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+#wrapper {
+  flex: 1 0 auto;
+}
+
+body header {
+   position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding:0 !important;
+    border:0 !important;
+    height: 1px !important; 
+    width: 1px !important; 
+  overflow: hidden;
+}
+
+a {
+  color: yellow;
+  text-decoration: none;
+}
+a:hover {
+  color: yellow;
+  text-decoration: none;
+}
+a:visited {
+  color: yellow;
+  text-decoration: none;
+}
+
+body {
+  font-size: 14px;
+  background-color: black;
+  color: white;
+}
+
+main {
+  float: left;
+}
+
+aside {
+  float: right;
+}
+
+main header {
+   position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding:0 !important;
+    border:0 !important;
+    height: 1px !important; 
+    width: 1px !important; 
+  overflow: hidden;
+}
+
+body .gist > * {
+  color: white;
+}
+
+body .gist {
+  display: flex;
+  flex-flow: row wrap;
+  background: black;
+}
+
+body .gist .gist-file {
+    flex: 1;
+    max-width: 60rem;
+    margin-bottom: 3rem;
+    margin-right: 1.5rem;
+    border-radius: 0;
+    border: 2px black;
+    background: black;
+}
+
+body .gist .gist-file:hover {
+    /* border: 2px dashed #adb5bd; */
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    /* margin-left: -2px; */
+    margin-top: -2px;
+    margin-bottom: calc(3rem - 2px);
+    /* margin-right: calc(1.5rem - 2px); */
+}
+
+body .gist .gist-data {
+    border-bottom: none;
+    border-radius: 0;
+    background-color: black;
+}
+
+
+body .gist .blob-wrapper {
+    border-radius: 0;
+}
+
+body .gist .highlight {
+    background-color: transparent;
+      font-family: 'Droid Sans Mono', monospace;
+        font-size: 14px;
+}
+
+body .gist .highlight td {
+    padding: 5px 15px !important;
+      line-height: 1;
+        font-family: inherit;
+          font-size: inherit;
+}
+
+body .gist .gist-meta {
+    display: none;
+}
