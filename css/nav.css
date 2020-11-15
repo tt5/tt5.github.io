@@ -6,6 +6,7 @@ nav {
   position: inline-block;
   margin: 0;
   padding: 0;
+  padding-bottom: 1rem;
   text-align: left;
 }
 
@@ -16,7 +17,7 @@ nav ul {
 }
 
 .nav {
-  font-style: italic;
+  font-style: normal;
 }
 
 nav li {
@@ -27,14 +28,14 @@ nav li {
 nav li:first-child {
     margin-left: 0;
 }
-* html nav ul {
-    margin-left: 0;
+nav ul {
+    margin-left: 0rem;
 }
-nav span, nav a {
-    padding: 0;
+nav a {
+    padding-right: 1rem;
 }
 nav span {
-    background: yellow;
+    background: white;
 }
 
 nav header {
