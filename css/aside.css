@@ -5,10 +5,42 @@ aside {
     position: relative;
     width: 0rem;
     background-color: black;
-    min-width: 8rem;
+    min-width: 11rem;
 }
 
 aside h2 {
     color: white;
     font-size: 1rem
+}
+
+aside header {
+   position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding:0 !important;
+    border:0 !important;
+    height: 1px !important; 
+    width: 1px !important; 
+  overflow: hidden;
+}
+
+aside ul {
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+}
+
+aside li {
+    display: inline;
+    margin: 0;
+    color: black;
+}
+aside li:first-child {
+    margin-left: 0;
+}
+aside ul {
+    margin-left: 0rem;
+}
+aside a {
+    padding-right: 1rem;
 }
