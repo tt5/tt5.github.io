@@ -1,0 +1,19 @@
+
+@font-face {
+	font-family: 'sourcesans';
+	src: url('SourceSans3-Regular.otf.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'sourcesans';
+	src: url('SourceSans3-Bold.otf.woff') format('woff');
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: 'sourcesans';
+	src: url('SourceSans3-It.otf.woff') format('woff');
+	font-style: italic;
+}

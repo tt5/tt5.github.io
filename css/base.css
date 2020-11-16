@@ -12,10 +12,15 @@ html, body {
   height: 100%;
 }
 
+body .gist .markdown-body {
+  font-family: sourcesans!important;
+}
+
 body {
   display: flex;
   flex-direction: column;
-  font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+/*  font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji; */
+  font-family: sourcesans;
 }
 #wrapper {
   flex: 1 0 auto;
