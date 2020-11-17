@@ -16,6 +16,8 @@ body .gist .markdown-body {
   font-family: sourcesans!important;
 }
 
+math { font-family: sourcesans; }
+
 body {
   display: flex;
   flex-direction: column;

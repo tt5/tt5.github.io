@@ -42,7 +42,14 @@
     <p>This is a gist</p>
     -->
 <script src="https://gist.github.com/tt5/079e0418ed01c721c80cf3b18a268c17.js"></script>
+<!--
 <script src="http://usernamea.pythonanywhere.com/hello/some"></script>
+-->
+
+
+  <math><mrow><msup><mi mathvariant="italic"> some </mi><mtext mathvariant="italic">some</mtext></msup> <mo> + </mo>
+  <msup><mi> b </mi><mn>2</mn></msup> <mo> = </mo> <msup><mi> c
+  </mi><mn>2</mn></msup> </mrow> </math>
   </section>
 </main>
 
