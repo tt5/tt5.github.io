@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/nav.css">
   <link rel="stylesheet" href="css/aside.css">
   <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/canvas.css">
 </head>
 <body>
 <div id="wrapper">
@@ -37,15 +38,223 @@
     <h2>Blog posts</h2>    
   </header>
 
-<table style="width:300px; height:300px; text-align:center;border-spacing:0pt;font-family:&#39;Arial Unicode MS&#39;; border-collapse:collapse; border-color: black; border-style: solid; border-width: 0pt 0pt 0pt 0pt">
+  <div id="chessboard">
+<canvas id="myCanvas"></canvas>
+
+  <script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.lineWidth = 8
+ctx.strokeStyle = "yellow";
+ctx.beginPath();
+ctx.moveTo(0, 0);
+ctx.lineTo(300, 150);
+ctx.stroke(); 
+  </script>
+
+<table id="chessbackground" style="text-align:center;border-spacing:0pt;font-family:&#39;Arial Unicode MS&#39;; border-collapse:collapse; border-color: black; border-style: solid; border-width: 0pt 0pt 0pt 0pt">
 <tbody><tr>
 <td style="width:24pt; height:24pt; border-collapse:collapse;
    border-style: solid; border-width: 1pt 0pt 0pt
-  1pt"><div>♜</div>
+  1pt">
 </td>
 <td style="width:24pt; height:24pt; border-collapse:collapse;
    border-style: solid; border-width: 1pt 0pt 0pt
-  0pt" bgcolor="black"><div>♞</div>
+  0pt" bgcolor="black">
+</td>
+<td style="width:24pt; height:24pt; border-collapse:collapse;
+   border-style: solid; border-width: 1pt 0pt 0pt
+  0pt">
+</td>
+<td style="width:24pt; height:24pt; border-collapse:collapse;
+   border-style: solid; border-width: 1pt 0pt 0pt
+  0pt" bgcolor="black">
+</td>
+<td style="width:24pt; height:24pt; border-collapse:collapse;
+   border-style: solid; border-width: 1pt 0pt 0pt 0pt">
+</td>
+<td style="width:24pt; height:24pt; border-collapse:collapse;
+   border-style: solid; border-width: 1pt 0pt 0pt
+  0pt" bgcolor="black">
+</td>
+<td style="width:24pt; height:24pt; border-collapse:collapse;
+   border-style: solid; border-width: 1pt 0pt 0pt 0pt">
+</td>
+<td style="width:24pt; height:24pt; border-collapse:collapse;
+   border-style: solid; border-width: 1pt 1pt 0pt
+  0pt" bgcolor="black">
+</td></tr>
+<tr>
+<td style="width:24pt; height:24pt; border-collapse:collapse;
+   border-style: solid; border-width: 0pt 0pt 0pt
+  1pt" bgcolor="black">
+</td>
+<td style="width:24pt; height:24pt;">
+</td>
+<td style="width:24pt; height:24pt;" bgcolor="black">
+</td>
+<td style="width:24pt; height:24pt;">
+</td>
+<td style="width:24pt; height:24pt;" bgcolor="black">
+</td>
+<td style="width:24pt; height:24pt;">
+</td>
+<td style="width:24pt; height:24pt;" bgcolor="black">
+</td>
+<td style="width:24pt; height:24pt; border-collapse:collapse;
+           border-style: solid; border-width: 0pt 1pt 0pt
+           0pt"></td></tr>
+<tr>
+<td style="width:24pt; height:24pt; border-collapse:collapse;
+           border-style: solid; border-width: 0pt 0pt 0pt
+           1pt"><div><br /></div>
+</td>
+<td style="width:24pt; height:24pt;" bgcolor="black">
+</td>
+<td style="width:24pt; height:24pt;">
+</td>
+<td style="width:24pt; height:24pt;" bgcolor="black">
+</td>
+<td style="width:24pt; height:24pt;">
+</td>
+<td style="width:24pt; height:24pt;" bgcolor="black">
+</td>
+<td style="width:24pt; height:24pt;">
+</td>
+<td style="width:24pt; height:24pt; border-collapse:collapse;
+  border-style: solid; border-width: 0pt 1pt 0pt
+  0pt" bgcolor="black">
+</td></tr>
+<tr>
+<td style="width:24pt; height:24pt; border-collapse:collapse;
+  border-style: solid; border-width: 0pt 0pt 0pt
+  1pt" bgcolor="black"><div><br /></div>
+</td>
+<td style="width:24pt; height:24pt;">
+</td>
+<td style="width:24pt; height:24pt;" bgcolor="black">
+</td>
+<td style="width:24pt; height:24pt;">
+</td>
+<td style="width:24pt; height:24pt;" bgcolor="black">
+</td>
+<td style="width:24pt; height:24pt;">
+</td>
+<td style="width:24pt; height:24pt;" bgcolor="black">
+</td>
+<td style="width:24pt; height:24pt; border-collapse:collapse; border-style: solid; border-width: 0pt 1pt 0pt 0pt">
+</td></tr>
+<tr>
+<td style="width:24pt; height:24pt; border-collapse:collapse;
+           border-style: solid; border-width: 0pt 0pt 0pt
+           1pt"><div><br /></div>
+</td>
+<td style="width:24pt; height:24pt;" bgcolor="black">
+</td>
+<td style="width:24pt; height:24pt;">
+</td>
+<td style="width:24pt; height:24pt;" bgcolor="black">
+</td>
+<td style="width:24pt; height:24pt;">
+</td>
+<td style="width:24pt; height:24pt;" bgcolor="black">
+</td>
+<td style="width:24pt; height:24pt;">
+</td>
+<td style="width:24pt; height:24pt; border-collapse:collapse;
+  border-style: solid; border-width: 0pt 1pt 0pt
+  0pt" bgcolor="black">
+</td></tr>
+<tr>
+<td style="width:24pt; height:24pt; border-collapse:collapse;
+  border-style: solid; border-width: 0pt 0pt 0pt
+  1pt" bgcolor="black"><div><br /></div>
+</td>
+<td style="width:24pt; height:24pt;">
+</td>
+<td style="width:24pt; height:24pt;" bgcolor="black">
+</td>
+<td style="width:24pt; height:24pt;">
+</td>
+<td style="width:24pt; height:24pt;" bgcolor="black">
+</td>
+<td style="width:24pt; height:24pt;">
+</td>
+<td style="width:24pt; height:24pt;" bgcolor="black">
+</td>
+<td style="width:24pt; height:24pt; border-collapse:collapse; border-style: solid; border-width: 0pt 1pt 0pt 0pt">
+</td></tr>
+<tr>
+<td style="width:24pt; height:24pt; border-collapse:collapse;
+           border-style: solid; border-width: 0pt 0pt 0pt
+           1pt">
+</td>
+<td style="width:24pt; height:24pt;" bgcolor="black">
+</td>
+<td style="width:24pt; height:24pt;">
+</td>
+<td style="width:24pt; height:24pt;" bgcolor="black">
+</td>
+<td style="width:24pt; height:24pt;">
+</td>
+<td style="width:24pt; height:24pt;" bgcolor="black">
+</td>
+<td style="width:24pt; height:24pt;">
+</td>
+<td style="width:24pt; height:24pt; border-collapse:collapse;
+  border-style: solid; border-width: 0pt 1pt 0pt
+  0pt" bgcolor="black">
+</td></tr>
+<tr>
+<td style="width:24pt; height:24pt; border-collapse:collapse;
+  border-style: solid; border-width: 0pt 0pt 1pt
+  1pt" bgcolor="black">
+</td>
+<td style="width:24pt; height:24pt; border-collapse:collapse;
+           border-style: solid; border-width: 0pt 0pt 1pt
+           0pt">
+</td>
+<td style="width:24pt; height:24pt; border-collapse:collapse;
+  border-style: solid; border-width: 0pt 0pt 1pt
+  0pt" bgcolor="black">
+</td>
+<td style="width:24pt; height:24pt; border-collapse:collapse;
+           border-style: solid; border-width: 0pt 0pt 1pt
+           0pt">
+</td>
+<td style="width:24pt; height:24pt; border-collapse:collapse;
+  border-style: solid; border-width: 0pt 0pt 1pt
+  0pt" bgcolor="black">
+</td>
+<td style="width:24pt; height:24pt; border-collapse:collapse;
+           border-style: solid; border-width: 0pt 0pt 1pt
+           0pt">
+</td>
+<td style="width:24pt; height:24pt; border-collapse:collapse;
+  border-style: solid; border-width: 0pt 0pt 1pt
+  0pt" bgcolor="black">
+</td>
+<td style="width:24pt; height:24pt; border-collapse:collapse;
+           border-style: solid; border-width: 0pt 1pt 1pt
+           0pt">
+</td></tr>
+</tbody></table>
+  </div>
+    <!--
+    <h1>Hi</h1>
+    <p>This is the body</p>
+    <p>This is a gist</p>
+    -->
+
+<table id="chesspieces" style="z-index: 5; text-align:center;border-spacing:0pt;font-family:&#39;Arial Unicode MS&#39;; border-collapse:collapse; border-color: black; border-style: solid; border-width: 0pt 0pt 0pt 0pt">
+<tbody><tr>
+<td style="width:24pt; height:24pt; border-collapse:collapse;
+   border-style: solid; border-width: 1pt 0pt 0pt
+  1pt"><div style="z-index:5;">♜</div>
+</td>
+<td style="width:24pt; height:24pt; border-collapse:collapse;
+   border-style: solid; border-width: 1pt 0pt 0pt
+  0pt" bgcolor="transparent"><div>♞</div>
 </td>
 <td style="width:24pt; height:24pt; border-collapse:collapse;
    border-style: solid; border-width: 1pt 0pt 0pt
@@ -53,38 +262,38 @@
 </td>
 <td style="width:24pt; height:24pt; border-collapse:collapse;
    border-style: solid; border-width: 1pt 0pt 0pt
-  0pt" bgcolor="black"><div>♛</div>
+  0pt" bgcolor="transparent"><div>♛</div>
 </td>
 <td style="width:24pt; height:24pt; border-collapse:collapse;
    border-style: solid; border-width: 1pt 0pt 0pt 0pt"><div>♚</div>
 </td>
 <td style="width:24pt; height:24pt; border-collapse:collapse;
    border-style: solid; border-width: 1pt 0pt 0pt
-  0pt" bgcolor="black"><div>♝</div>
+  0pt" bgcolor="transparent"><div>♝</div>
 </td>
 <td style="width:24pt; height:24pt; border-collapse:collapse;
    border-style: solid; border-width: 1pt 0pt 0pt 0pt"><div>♞</div>
 </td>
 <td style="width:24pt; height:24pt; border-collapse:collapse;
    border-style: solid; border-width: 1pt 1pt 0pt
-  0pt" bgcolor="black"><div>♜</div>
+  0pt" bgcolor="transparent"><div>♜</div>
 </td></tr>
 <tr>
 <td style="width:24pt; height:24pt; border-collapse:collapse;
    border-style: solid; border-width: 0pt 0pt 0pt
-  1pt" bgcolor="black"><div>♟</div>
+  1pt" bgcolor="transparent"><div>♟</div>
 </td>
 <td style="width:24pt; height:24pt;"><div>♟</div>
 </td>
-<td style="width:24pt; height:24pt;" bgcolor="black"><div>♟</div>
+<td style="width:24pt; height:24pt;" bgcolor="transparent"><div>♟</div>
 </td>
 <td style="width:24pt; height:24pt;"><div>♟</div>
 </td>
-<td style="width:24pt; height:24pt;" bgcolor="black"><div>♟</div>
+<td style="width:24pt; height:24pt;" bgcolor="transparent"><div>♟</div>
 </td>
 <td style="width:24pt; height:24pt;"><div>♟</div>
 </td>
-<td style="width:24pt; height:24pt;" bgcolor="black"><div>♟</div>
+<td style="width:24pt; height:24pt;" bgcolor="transparent"><div>♟</div>
 </td>
 <td style="width:24pt; height:24pt; border-collapse:collapse;
            border-style: solid; border-width: 0pt 1pt 0pt
@@ -95,38 +304,38 @@
            border-style: solid; border-width: 0pt 0pt 0pt
            1pt"><div><br /></div>
 </td>
-<td style="width:24pt; height:24pt;" bgcolor="black">
+<td style="width:24pt; height:24pt;" bgcolor="transparent">
 </td>
 <td style="width:24pt; height:24pt;">
 </td>
-<td style="width:24pt; height:24pt;" bgcolor="black">
+<td style="width:24pt; height:24pt;" bgcolor="transparent">
 </td>
 <td style="width:24pt; height:24pt;">
 </td>
-<td style="width:24pt; height:24pt;" bgcolor="black">
+<td style="width:24pt; height:24pt;" bgcolor="transparent">
 </td>
 <td style="width:24pt; height:24pt;">
 </td>
 <td style="width:24pt; height:24pt; border-collapse:collapse;
   border-style: solid; border-width: 0pt 1pt 0pt
-  0pt" bgcolor="black">
+  0pt" bgcolor="transparent">
 </td></tr>
 <tr>
 <td style="width:24pt; height:24pt; border-collapse:collapse;
   border-style: solid; border-width: 0pt 0pt 0pt
-  1pt" bgcolor="black"><div><br /></div>
+  1pt" bgcolor="transparent"><div><br /></div>
 </td>
 <td style="width:24pt; height:24pt;">
 </td>
-<td style="width:24pt; height:24pt;" bgcolor="black">
+<td style="width:24pt; height:24pt;" bgcolor="transparent">
 </td>
 <td style="width:24pt; height:24pt;">
 </td>
-<td style="width:24pt; height:24pt;" bgcolor="black">
+<td style="width:24pt; height:24pt;" bgcolor="transparent">
 </td>
 <td style="width:24pt; height:24pt;">
 </td>
-<td style="width:24pt; height:24pt;" bgcolor="black">
+<td style="width:24pt; height:24pt;" bgcolor="transparent">
 </td>
 <td style="width:24pt; height:24pt; border-collapse:collapse; border-style: solid; border-width: 0pt 1pt 0pt 0pt">
 </td></tr>
@@ -135,38 +344,38 @@
            border-style: solid; border-width: 0pt 0pt 0pt
            1pt"><div><br /></div>
 </td>
-<td style="width:24pt; height:24pt;" bgcolor="black">
+<td style="width:24pt; height:24pt;" bgcolor="transparent">
 </td>
 <td style="width:24pt; height:24pt;">
 </td>
-<td style="width:24pt; height:24pt;" bgcolor="black">
+<td style="width:24pt; height:24pt;" bgcolor="transparent">
 </td>
 <td style="width:24pt; height:24pt;">
 </td>
-<td style="width:24pt; height:24pt;" bgcolor="black">
+<td style="width:24pt; height:24pt;" bgcolor="transparent">
 </td>
 <td style="width:24pt; height:24pt;">
 </td>
 <td style="width:24pt; height:24pt; border-collapse:collapse;
   border-style: solid; border-width: 0pt 1pt 0pt
-  0pt" bgcolor="black">
+  0pt" bgcolor="transparent">
 </td></tr>
 <tr>
 <td style="width:24pt; height:24pt; border-collapse:collapse;
   border-style: solid; border-width: 0pt 0pt 0pt
-  1pt" bgcolor="black"><div><br /></div>
+  1pt" bgcolor="transparent"><div><br /></div>
 </td>
 <td style="width:24pt; height:24pt;">
 </td>
-<td style="width:24pt; height:24pt;" bgcolor="black">
+<td style="width:24pt; height:24pt;" bgcolor="transparent">
 </td>
 <td style="width:24pt; height:24pt;">
 </td>
-<td style="width:24pt; height:24pt;" bgcolor="black">
+<td style="width:24pt; height:24pt;" bgcolor="transparent">
 </td>
 <td style="width:24pt; height:24pt;">
 </td>
-<td style="width:24pt; height:24pt;" bgcolor="black">
+<td style="width:24pt; height:24pt;" bgcolor="transparent">
 </td>
 <td style="width:24pt; height:24pt; border-collapse:collapse; border-style: solid; border-width: 0pt 1pt 0pt 0pt">
 </td></tr>
@@ -175,26 +384,26 @@
            border-style: solid; border-width: 0pt 0pt 0pt
            1pt"><div>♙</div>
 </td>
-<td style="width:24pt; height:24pt;" bgcolor="black"><div>♙</div>
+<td style="width:24pt; height:24pt;" bgcolor="transparent"><div>♙</div>
 </td>
 <td style="width:24pt; height:24pt;"><div>♙</div>
 </td>
-<td style="width:24pt; height:24pt;" bgcolor="black"><div>♙</div>
+<td style="width:24pt; height:24pt;" bgcolor="transparent"><div>♙</div>
 </td>
 <td style="width:24pt; height:24pt;"><div>♙</div>
 </td>
-<td style="width:24pt; height:24pt;" bgcolor="black"><div>♙</div>
+<td style="width:24pt; height:24pt;" bgcolor="transparent"><div>♙</div>
 </td>
 <td style="width:24pt; height:24pt;"><div>♙</div>
 </td>
 <td style="width:24pt; height:24pt; border-collapse:collapse;
   border-style: solid; border-width: 0pt 1pt 0pt
-  0pt" bgcolor="black"><div>♙</div>
+  0pt" bgcolor="transparent"><div>♙</div>
 </td></tr>
 <tr>
 <td style="width:24pt; height:24pt; border-collapse:collapse;
   border-style: solid; border-width: 0pt 0pt 1pt
-  1pt" bgcolor="black"><div>♖</div>
+  1pt" bgcolor="transparent"><div>♖</div>
 </td>
 <td style="width:24pt; height:24pt; border-collapse:collapse;
            border-style: solid; border-width: 0pt 0pt 1pt
@@ -202,7 +411,7 @@
 </td>
 <td style="width:24pt; height:24pt; border-collapse:collapse;
   border-style: solid; border-width: 0pt 0pt 1pt
-  0pt" bgcolor="black"><div>♗</div>
+  0pt" bgcolor="transparent"><div>♗</div>
 </td>
 <td style="width:24pt; height:24pt; border-collapse:collapse;
            border-style: solid; border-width: 0pt 0pt 1pt
@@ -210,7 +419,7 @@
 </td>
 <td style="width:24pt; height:24pt; border-collapse:collapse;
   border-style: solid; border-width: 0pt 0pt 1pt
-  0pt" bgcolor="black"><div>♔</div>
+  0pt" bgcolor="transparent"><div>♔</div>
 </td>
 <td style="width:24pt; height:24pt; border-collapse:collapse;
            border-style: solid; border-width: 0pt 0pt 1pt
@@ -218,28 +427,31 @@
 </td>
 <td style="width:24pt; height:24pt; border-collapse:collapse;
   border-style: solid; border-width: 0pt 0pt 1pt
-  0pt" bgcolor="black"><div>♘</div>
+  0pt" bgcolor="transparent"><div>♘</div>
 </td>
 <td style="width:24pt; height:24pt; border-collapse:collapse;
            border-style: solid; border-width: 0pt 1pt 1pt
            0pt"><div>♖</div>
 </td></tr>
 </tbody></table>
+  </div>
     <!--
     <h1>Hi</h1>
     <p>This is the body</p>
     <p>This is a gist</p>
     -->
-<script src="https://gist.github.com/tt5/079e0418ed01c721c80cf3b18a268c17.js"></script>
 <!--
+<script src="https://gist.github.com/tt5/079e0418ed01c721c80cf3b18a268c17.js"></script>
 <script src="http://usernamea.pythonanywhere.com/hello/some"></script>
--->
-
 
   <math><mrow><msup><mi mathvariant="italic"> some </mi><mtext mathvariant="italic">some</mtext></msup> <mo> + </mo>
   <msup><mi> b </mi><mn>2</mn></msup> <mo> = </mo> <msup><mi> c
   </mi><mn>2</mn></msup> </mrow> </math>
+-->
 
+  </section>
+  <section>
+<script src="https://gist.github.com/tt5/079e0418ed01c721c80cf3b18a268c17.js"></script>
   </section>
 </main>
 

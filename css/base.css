@@ -13,30 +13,53 @@ td {
   width: 20px;
   height: 20px;
   border-color: white;
+  z-index: 1;
 }
-td div { width:100%;height:100%;overflow:visible; margin-top: -20px;  font-size: 300%;}
-table {
+td div {
+/*  text-align: center; */
+  width:100%;
+  height:100%;
+  overflow:visible;
+  margin-top: -20px;
+  font-size: 300%;
+  z-index: 1;
+}
+
+#chesspieces {
+  color: white;
+  z-index: 6;
+width:300px; height:300px; 
+  position: fixed;
+  margin-top: -300px;
+}
+
+#chessbackground {
 /*  table-layout: fixed; */
+width:300px; height:300px; 
   background-size: 9px 9px;
   background-image:
-    linear-gradient(45deg, gray 1px, darkgray 3px, gray 6px, darkgray 11px, darkgray, 11px, gray 2px)
+    linear-gradient(45deg, gray 1px, darkgray 3px, gray 6px, darkgray 11px, darkgray, 11px, gray 2px);
+/*  position: fixed; */
+  z-index: -1;
   }
 
 html, body {
   height: 100%;
 }
 
+/*
 body .gist .markdown-body {
   font-family: sourcesans!important;
 }
 
 math { font-family: sourcesans; }
+*/
 
 body {
   display: flex;
   flex-direction: column;
 /*  font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji; */
-  font-family: sourcesans;
+  font-family: "Source Sans Pro", sourcesans;
 }
 #wrapper {
   flex: 1 0 auto;

@@ -1,4 +1,13 @@
 
 #myCanvas {
-    border:1rem solid black;
+    border:1pt solid white;
+    position: fixed;
+width:300px; height:300px; 
+  z-index: 0;
 }
+
+#chessboard {
+  background-color:green;
+}
+
+
