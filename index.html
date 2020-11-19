@@ -11,6 +11,17 @@
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/fullscreen.css">
   <link rel="stylesheet" href="css/canvas.css">
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      fetch('http://usernamea.pythonanywhere.com/hello/some')
+      .then(response =>  response.json())
+      .then(data => {
+          const rate = data.one;
+          document.querySelector('#one').innerHTML = rate;
+      });
+    });
+          
+  </script>
 </head>
 
 <body>
@@ -457,11 +468,14 @@ ctx.stroke();
   </section>
   <section>
 
+    <!--
 <script src="https://gist.github.com/tt5/079e0418ed01c721c80cf3b18a268c17.js"></script>
+-->
 
   <math><mrow><msup><mi mathvariant="italic"> some </mi><mtext mathvariant="italic">some</mtext></msup> <mo> + </mo>
   <msup><mi> b </mi><mn>2</mn></msup> <mo> = </mo> <msup><mi> c
   </mi><mn>2</mn></msup> </mrow> </math>
+  <span id="one"></span>
   </section>
 </main>
 
