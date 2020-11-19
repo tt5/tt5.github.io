@@ -1,5 +1,7 @@
 
+/*
 @import url('https://fonts.googleapis.com/css?family=Droid+Sans+Mono');
+*/
 
 /*
 html, body, header, nav, main, aside, footer, p, section {
@@ -28,9 +30,11 @@ td div {
 #chesspieces {
   color: white;
   z-index: 6;
-width:300px; height:300px; 
+  width:300px;
+  height:300px;
   position: fixed;
   margin-top: -300px;
+  visibility: hidden;
 }
 
 #chessbackground {
@@ -43,8 +47,9 @@ width:300px; height:300px;
   z-index: -1;
   }
 
-html, body {
+html {
   height: 100%;
+  width: 100%;
 }
 
 /*
@@ -54,26 +59,29 @@ body .gist .markdown-body {
 
 math { font-family: sourcesans; }
 */
+math { font-family: serif; }
 
 body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
   display: flex;
   flex-direction: column;
 /*  font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji; */
-  font-family: "Source Sans Pro", sourcesans;
+/*  font-family: "Source Sans Pro", sourcesans; */
+/*  font-family: "Source Sans Pro"; */
+  font-family: sans; 
 }
 #wrapper {
   flex: 1 0 auto;
 }
- /* Hide scrollbar for Chrome, Safari and Opera */
-html::-webkit-scrollbar {
-  display: none;
-}
 
-/* Hide scrollbar for IE, Edge and Firefox */
+/*
 html {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 } 
+*/
 
 
 body header {
@@ -166,11 +174,13 @@ body .gist .blob-wrapper {
     border-radius: 0;
 }
 
+/*
 body .gist .highlight {
     background-color: transparent;
       font-family: 'Droid Sans Mono', monospace;
         font-size: 14px;
 }
+*/
 
 body .gist .highlight td {
     padding: 5px 15px !important;

@@ -1,0 +1,6 @@
+
+/* applied for all elements that go to fullscreen */
+:fullscreen > * { 
+  visibility: visible!important;
+	/* CSS properties */
+}
