@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/fullscreen.css">
   <link rel="stylesheet" href="css/canvas.css">
+  <script src="mycanvas.js"><script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       fetch('http://usernamea.pythonanywhere.com/hello/some')
@@ -52,22 +53,11 @@
   </header>
 
   <div id="fullboard">
-<canvas id="myCanvas"></canvas>
+<canvas id="myCanvas" width="128" height="128"></canvas>
   <div id="chessboard">
 
-  <script>
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-ctx.lineWidth = 8
-ctx.strokeStyle = "yellow";
-ctx.beginPath();
-ctx.moveTo(0, 0);
-ctx.lineTo(300, 150);
-ctx.stroke(); 
-  </script>
-
 <table id="chessbackground">
-<tbody>
+<tbody id="chessbtbody">
   <tr>
     <td id="ba8"><div></div></td>
 <td id="bb8"><div></div></td>
@@ -340,12 +330,18 @@ document.addEventListener('fullscreenchange', function() {
       some1.innerHTML = 'exit fullscreen';
       let pieces = document.querySelector("#chesspieces")
       pieces.style.display = 'block';
+      let canvas = document.querySelector("#myCanvas")
+      canvas.style.display = 'block';
+      runcanvas();
+
 	}
 	else {
       let some1 = document.querySelector("#go-button")
       some1.innerHTML = 'show game';
       let pieces = document.querySelector("#chesspieces")
       pieces.style.display = 'none';
+      let canvas = document.querySelector("#myCanvas")
+      canvas.style.display = 'none';
 	}
 });
 </script>
