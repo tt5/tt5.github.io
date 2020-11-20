@@ -10,46 +10,71 @@ html, body, header, nav, main, aside, footer, p, section {
 }
 */
 
+html {
+  height: 100%;
+  width: 100%;
+}
+
+#ba1, #ba3, #ba5, #ba7, #bb2, #bb4, #bb6, #bb8, #bc1, #bc3, #bc5, #bc7, #bd2, #bd4, #bd6, #bd8, #be1, #be3, #be5, #be7, #bf2, #bf4, #bf6, #bf8, #bg1, #bg3, #bg5, #bg7, #bh2, #bh4, #bh6, #bh8 {
+  background-color: black;
+}
+
+#fb8 #fd8 {
+  background-color: transparent;
+}
+
 
 td {
-  width: 20px;
-  height: 20px;
-  border-color: white;
   z-index: 1;
+  width: 1rem;
+  height: 1rem;
+  padding: 0;
 }
+
 td div {
-/*  text-align: center; */
+  text-align: center;
   width:100%;
   height:100%;
   overflow:visible;
-  margin-top: -20px;
-  font-size: 300%;
+  margin-top: 0rem;
+  font-size: 1rem;
   z-index: 1;
+  padding: 0;
+}
+
+#chesspieces, #chessbackground {
+/*  width: calc(8 * 1rem); */
+/*  height:300px; */
+  text-align:center;
+  border-spacing: 0;
+/* font-family:&#39; Arial Unicode MS&#39;; */
+  border-collapse: collapse;
+  border-color: red;
+  border-style: solid;
+  border-width: 0pt 0pt 0pt 0pt;
+  margin: 0;
+  padding: 0;
+  display: block;
 }
 
 #chesspieces {
   color: white;
-  z-index: 6;
-  width:300px;
-  height:300px;
   position: fixed;
-  margin-top: -300px;
-  visibility: hidden;
+  margin-top: calc(-8 * 1rem);
+  z-index: 5;
+  display: none;
 }
 
 #chessbackground {
-/*  table-layout: fixed; */
-width:300px; height:300px; 
-  background-size: 9px 9px;
-  background-image:
-    linear-gradient(45deg, gray 1px, darkgray 3px, gray 6px, darkgray 11px, darkgray, 11px, gray 2px);
-/*  position: fixed; */
-  z-index: -1;
+  background-color: black;
+/*  background-size: 9px 9px; */
+/*  background-image: */
+/*    linear-gradient(45deg, gray 1px, darkgray 3px, gray 6px, darkgray 11px, darkgray, 11px, gray 2px); */
+/*  z-index: -1; */
   }
 
-html {
-  height: 100%;
-  width: 100%;
+#chessbtbody {
+  background-color: darkgray;
 }
 
 /*
@@ -62,6 +87,7 @@ math { font-family: sourcesans; }
 math { font-family: serif; }
 
 body {
+  font-size: 14px;
   height: 100%;
   width: 100%;
   margin: 0;

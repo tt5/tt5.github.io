@@ -2,10 +2,11 @@
 #myCanvas {
   border:1pt solid white;
   position: fixed;
-  width:300px;
-  height:300px;
+  width: calc(8 * 1rem);
+  height: calc(8 * 1rem);
   z-index: 0;
-  visibility: hidden;
+  display: none;
+/*  visibility: hidden;*/
 }
 
 #fullboard {
