@@ -364,8 +364,8 @@ document.addEventListener('fullscreenchange', function() {
       let pieces = document.querySelector("#chesspieces")
       pieces.style.display = 'block';
       for (let i of canvasnames) {
-        let canvas = document.querySelector(${i}`)
-        canvas.style.display = 'block;
+        let canvas = document.querySelector(`${i}`)
+        canvas.style.display = 'block';
       }
 
       runcanvas();
@@ -379,8 +379,8 @@ document.addEventListener('fullscreenchange', function() {
       pieces.style.display = 'none';
 
       for (let i of canvasnames) {
-        let canvas = document.querySelector(${i}`)
-        canvas.style.display = 'none;
+        let canvas = document.querySelector(`${i}`)
+        canvas.style.display = 'none';
       }
 	}
 });
