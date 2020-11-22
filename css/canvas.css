@@ -1,9 +1,9 @@
 
-#myCanvas {
-  border:1pt solid white;
+#wrq, #wnq, #wbl, #wq, #wbd, #wnk, #wrk, #brq, #bnq, #bbl, #bq, #bbd, #bnk, #brk {
+/*  border:1pt solid white; */
   position: fixed;
-  width: calc(8 * 1rem);
-  height: calc(8 * 1rem);
+/*  width: calc(8 * 1rem); */
+/*  height: calc(8 * 1rem); */
   z-index: 0;
   display: none;
 /*  visibility: hidden;*/
@@ -12,5 +12,4 @@
 #fullboard {
   background-color:black;
 }
-
 

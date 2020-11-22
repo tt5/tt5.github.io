@@ -53,7 +53,22 @@
   </header>
 
   <div id="fullboard">
-<canvas id="myCanvas" width="128" height="128"></canvas>
+
+<canvas id="wrq" width="128" height="128"></canvas>
+<canvas id="wnq" width="128" height="128"></canvas>
+<canvas id="wbl" width="128" height="128"></canvas>
+<canvas id="wq" width="128" height="128"></canvas>
+<canvas id="wbd" width="128" height="128"></canvas>
+<canvas id="wnk" width="128" height="128"></canvas>
+<canvas id="wrk" width="128" height="128"></canvas>
+<canvas id="brq" width="128" height="128"></canvas>
+<canvas id="bnq" width="128" height="128"></canvas>
+<canvas id="bbl" width="128" height="128"></canvas>
+<canvas id="bq" width="128" height="128"></canvas>
+<canvas id="bbd" width="128" height="128"></canvas>
+<canvas id="bnk" width="128" height="128"></canvas>
+<canvas id="brk" width="128" height="128"></canvas>
+
   <div id="chessboard">
 
 <table id="chessbackground">
@@ -151,84 +166,84 @@
 <table id="chesspieces">
 <tbody>
   <tr>
-<td><div>♜</div></td>
-<td id="fb8"><div>♞</div></td>
-<td><div>♝</div></td>
-<td id="fd8"><div>♛</div></td>
-<td><div>♚</div></td>
-<td><div>♝</div></td>
-<td><div>♞</div></td>
-<td><div>♜</div></td>
+<td><div id="a8">♜</div></td>
+<td id="fb8"><div id="b8">♞</div></td>
+<td><div id="c8">♝</div></td>
+<td id="fd8"><div id="d8">♛</div></td>
+<td><div id="e8">♚</div></td>
+<td><div id="f8">♝</div></td>
+<td><div id="g8">♞</div></td>
+<td><div id="h8">♜</div></td>
   </tr>
 
 <tr>
-<td><div>♟</div> </td>
-<td><div>♟</div> </td>
-<td><div>♟</div> </td>
-<td><div>♟</div> </td>
-<td><div>♟</div> </td>
-<td><div>♟</div> </td>
-<td><div>♟</div> </td>
-<td><div>♟</div> </td>
+<td><div id="a7">♟</div> </td>
+<td><div id="b7">♟</div> </td>
+<td><div id="c7">♟</div> </td>
+<td><div id="d7">♟</div> </td>
+<td><div id="e7">♟</div> </td>
+<td><div id="f7">♟</div> </td>
+<td><div id="g7">♟</div> </td>
+<td><div id="h7">♟</div> </td>
 </tr>
 
 <tr>
-<td><div></div> </td>
-<td><div></div> </td>
-<td><div></div> </td>
-<td><div></div> </td>
-<td><div></div> </td>
-<td><div></div> </td>
-<td><div></div> </td>
-<td><div></div> </td></tr>
+<td><div id="a6"></div> </td>
+<td><div id="b6"></div> </td>
+<td><div id="c6"></div> </td>
+<td><div id="d6"></div> </td>
+<td><div id="e6"></div> </td>
+<td><div id="f6"></div> </td>
+<td><div id="g6"></div> </td>
+<td><div id="h6"></div> </td></tr>
 <tr>
-<td><div></div> </td>
-<td><div></div> </td>
-<td><div></div> </td>
-<td><div></div> </td>
-<td><div></div> </td>
-<td><div></div> </td>
-<td><div></div> </td>
-<td><div></div> </td>
+<td><div id="a5"></div> </td>
+<td><div id="b5"></div> </td>
+<td><div id="c5"></div> </td>
+<td><div id="d5"></div> </td>
+<td><div id="e5"></div> </td>
+<td><div id="f5"></div> </td>
+<td><div id="g5"></div> </td>
+<td><div id="h5"></div> </td>
 </tr>
 <tr>
-<td><div></div> </td>
-<td><div></div> </td>
-<td><div></div> </td>
-<td><div></div> </td>
-<td><div></div> </td>
-<td><div></div> </td>
-<td><div></div> </td>
-<td><div></div> </td></tr>
+<td><div id="a4"></div> </td>
+<td><div id="b4"></div> </td>
+<td><div id="c4"></div> </td>
+<td><div id="d4"></div> </td>
+<td><div id="e4"></div> </td>
+<td><div id="f4"></div> </td>
+<td><div id="g4"></div> </td>
+<td><div id="h4"></div> </td></tr>
 <tr>
-<td><div></div> </td>
-<td><div></div> </td>
-<td><div></div> </td>
-<td><div></div> </td>
-<td><div></div> </td>
-<td><div></div> </td>
-<td><div></div> </td>
-<td><div></div> </td>
+<td><div id="a3"></div> </td>
+<td><div id="b3"></div> </td>
+<td><div id="c3"></div> </td>
+<td><div id="d3"></div> </td>
+<td><div id="e3"></div> </td>
+<td><div id="f3"></div> </td>
+<td><div id="g3"></div> </td>
+<td><div id="h3"></div> </td>
 </tr>
 <tr>
-<td><div>♙</div> </td>
-<td><div>♙</div> </td>
-<td><div>♙</div> </td>
-<td><div>♙</div> </td>
-<td><div>♙</div> </td>
-<td><div>♙</div> </td>
-<td><div>♙</div> </td>
-<td><div>♙</div> </td>
+<td><div id="a2">♙</div> </td>
+<td><div id="b2">♙</div> </td>
+<td><div id="c2">♙</div> </td>
+<td><div id="d2">♙</div> </td>
+<td><div id="e2">♙</div> </td>
+<td><div id="f2">♙</div> </td>
+<td><div id="g2">♙</div> </td>
+<td><div id="h2">♙</div> </td>
 </tr>
 <tr>
-<td><div>♖</div> </td>
-<td><div>♘</div> </td>
-<td><div>♗</div> </td>
-<td><div>♕</div> </td>
-<td><div>♔</div> </td>
-<td><div>♗</div> </td>
-<td><div>♘</div> </td>
-<td><div>♖</div> </td>
+<td><div id="a1">♖</div> </td>
+<td><div id="b1">♘</div> </td>
+<td><div id="c1">♗</div> </td>
+<td><div id="d1">♕</div> </td>
+<td><div id="e1">♔</div> </td>
+<td><div id="f1">♗</div> </td>
+<td><div id="g1">♘</div> </td>
+<td><div id="h1">♖</div> </td>
 </tr>
 </tbody></table>
 
@@ -324,24 +339,49 @@ gobutton.addEventListener("click", function() {
       GoInFullscreen(document.querySelector("#fullboard"));
 });
 
+
+canvasnames = [
+"#wrq",
+"#wnq",
+ "#wbl",
+ "#wq" ,
+ "#wbd",
+ "#wnk",
+ "#wrk",
+ "#brq",
+ "#bnq",
+ "#bbl",
+ "#bq" ,
+ "#bbd",
+ "#bnk",
+ "#brk",
+  ];
+
 document.addEventListener('fullscreenchange', function() {
 	if(IsFullScreenCurrently()) {
       let some1 = document.querySelector("#go-button")
       some1.innerHTML = 'exit fullscreen';
       let pieces = document.querySelector("#chesspieces")
       pieces.style.display = 'block';
-      let canvas = document.querySelector("#myCanvas")
-      canvas.style.display = 'block';
+      for (let i of canvasnames) {
+        let canvas = document.querySelector(`${i}`)
+        canvas.style.display = 'block';
+      }
+
       runcanvas();
 
 	}
 	else {
+      cancelAnimationFrame(loopid);
       let some1 = document.querySelector("#go-button")
       some1.innerHTML = 'show game';
       let pieces = document.querySelector("#chesspieces")
       pieces.style.display = 'none';
-      let canvas = document.querySelector("#myCanvas")
-      canvas.style.display = 'none';
+
+      for (let i of canvasnames) {
+        let canvas = document.querySelector(`${i}`)
+        canvas.style.display = 'none';
+      }
 	}
 });
 </script>
