@@ -166,14 +166,14 @@
 <table id="chesspieces">
 <tbody>
   <tr>
-<td><div id="a8">♜</div></td>
+<td><div id="a8">♜︀</div></td>
 <td id="fb8"><div id="b8">♞</div></td>
-<td><div id="c8">♝</div></td>
+<td><div id="c8">♝︀</div></td>
 <td id="fd8"><div id="d8">♛</div></td>
 <td><div id="e8">♚</div></td>
-<td><div id="f8">♝</div></td>
+<td><div id="f8">♝︁</div></td>
 <td><div id="g8">♞</div></td>
-<td><div id="h8">♜</div></td>
+<td><div id="h8">♜︁</div></td>
   </tr>
 
 <tr>
@@ -236,14 +236,14 @@
 <td><div id="h2">♙</div> </td>
 </tr>
 <tr>
-<td><div id="a1">♖</div> </td>
+<td><div id="a1">♖︀</div> </td>
 <td><div id="b1">♘</div> </td>
-<td><div id="c1">♗</div> </td>
+<td><div id="c1">♗︁</div> </td>
 <td><div id="d1">♕</div> </td>
 <td><div id="e1">♔</div> </td>
-<td><div id="f1">♗</div> </td>
+<td><div id="f1">♗︀</div> </td>
 <td><div id="g1">♘</div> </td>
-<td><div id="h1">♖</div> </td>
+<td><div id="h1">♖︁</div> </td>
 </tr>
 </tbody></table>
 

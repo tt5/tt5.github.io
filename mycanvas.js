@@ -127,11 +127,103 @@ var mainLoop = function (time) {
     oldfrom = movefrom;
     piece1 = document.querySelector(`#${movefrom}`);
     piece = piece1.innerHTML;
+    var piece2 = piece;
+    switch (piece2) {
+      case '♙':
+        break;
+      case '♔':
+        break;
+      case '\u2656\ufe00':
+        drawPieceMove("wrq");
+        break;
+      case '\u2656\ufe01':
+        drawPieceMove("wrk");
+        break;
+      case '\u2657\ufe00':
+        drawPieceMove("wbd");
+        break;
+      case '\u2657\ufe01':
+        drawPieceMove("wbl");
+        break;
+      case '♕':
+        drawPieceMove("wq");
+        break;
+      case '♟':
+        break;
+      case '♚':
+        break;
+      case '\u265c\ufe00':
+        drawPieceMove("brq");
+        break;
+      case '\u265c\ufe01':
+        drawPieceMove("brk");
+        break;
+      case '\u265d\ufe00':
+        drawPieceMove("bbd");
+        break;
+      case '\u265d\ufe01':
+        drawPieceMove("bbl");
+        break;
+      case '♛':
+        drawPieceMove("bq");
+        break;
+      default:
+        break;
+    }
     dest = document.querySelector(`#${moveto}`)
     dest.innerHTML = piece;
     piece1.innerHTML = "";
 }
 
+function drawPieceMove(name){
+  var name = name;
+        var c = document.getElementById(name);
+        var ctx = c.getContext("2d" );
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
+        ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+        ctx.lineWidth = 4;
+        ctx.strokeStyle = "yellow";
+        drawPiece(name, ctx);
+}
+
+function drawPiece(name, ctx) {
+  var name = name;
+  var ctx = ctx;
+  switch (name) {
+    case 'wrq':
+        drawRook(ctx, (moveto.charCodeAt(0)-(48+48)), (-1)*(moveto.charCodeAt(1)-48-9));
+      break;
+    case 'wrk':
+        drawRook(ctx, (moveto.charCodeAt(0)-(48+48)), (-1)*(moveto.charCodeAt(1)-48-9));
+      break;
+    case 'wbd':
+        drawBish(ctx, (moveto.charCodeAt(0)-(48+48)), (-1)*(moveto.charCodeAt(1)-48-9));
+      break;
+    case 'wbl':
+        drawBish(ctx, (moveto.charCodeAt(0)-(48+48)), (-1)*(moveto.charCodeAt(1)-48-9));
+      break;
+    case 'wq':
+        drawQueen(ctx, (moveto.charCodeAt(0)-(48+48)), (-1)*(moveto.charCodeAt(1)-48-9));
+      break;
+    case 'brq':
+        drawRook(ctx, (moveto.charCodeAt(0)-(48+48)), (-1)*(moveto.charCodeAt(1)-48-9));
+      break;
+    case 'brk':
+        drawRook(ctx, (moveto.charCodeAt(0)-(48+48)), (-1)*(moveto.charCodeAt(1)-48-9));
+      break;
+    case 'bbd':
+        drawBish(ctx, (moveto.charCodeAt(0)-(48+48)), (-1)*(moveto.charCodeAt(1)-48-9));
+      break;
+    case 'bbl':
+        drawBish(ctx, (moveto.charCodeAt(0)-(48+48)), (-1)*(moveto.charCodeAt(1)-48-9));
+      break;
+    case 'bq':
+        drawQueen(ctx, (moveto.charCodeAt(0)-(48+48)), (-1)*(moveto.charCodeAt(1)-48-9));
+      break;
+    default:
+      break;
+  }
+}
 // set to
 
 
@@ -258,9 +350,6 @@ drawBish(ctxbbd, 3, 1);
 drawQueen(ctxbq, 4, 1);
 drawBish(ctxbbl, 6, 1);
 drawRook(ctxbrk, 8, 1);
-
-
-
 
 loopid = requestAnimationFrame(mainLoop);
 
