@@ -368,6 +368,11 @@ document.addEventListener('fullscreenchange', function() {
         canvas.style.display = 'block';
       }
 
+    let rungameaction = document.querySelector("#chesspieces");
+    rungameaction.addEventListener("click", function() {
+      rungame()
+    }, {once:true});
+
       runcanvas();
 
 	}

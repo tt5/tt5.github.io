@@ -1,4 +1,46 @@
+function getmoves(game) {
+  var game = game;
+  return fetch('http://usernamea.pythonanywhere.com/hello/some')
+  .then(response => response.json())
+  .then(data => {
+    return data[game];
+  });
+};
 
+var gameN = "game1"
+//getmove(gameN).then(response => console.log(response[0][0]));
+
+function rungame() {
+  getmoves("game1").then(r => {
+      var i = 1;
+      var intervalId = setInterval(function() {
+        changemove1(db, r[i][0], r[i][1]);
+        i++;
+      }, 1000);
+      setTimeout(function() {clearInterval(intervalId)
+
+      for (let ii = i; ii >= 0; ii--) {
+      setTimeout(function() {
+        changemove1(db, r[ii][1], r[ii][0]);
+      }, (i + 1) * 1000 + ii * 100);
+      }
+
+      }, (r.length) * 1000);
+      changemove1(db, r[0][0], r[0][1]);
+    });
+      /*
+      for (let i = r.length - 1; i >= 0; i--) {
+      setTimeout(function() {
+        changemove1(db, r[i][1], r[i][0]);
+      }, (r.length + 1) * 1000 + i * 100);
+      */
+};
+
+
+const data = '{ "game1":  [ ["e2", "e4"], ["e7", "e5"] ] }';
+var games = JSON.parse(data);
+const move_1_w = games.game1[0][0];
+const move_1_b = games.game1[0][1];
 
 var movefrom = "";
 var moveto = "";
@@ -21,7 +63,8 @@ request.onupgradeneeded = function(event) {
 request.onsuccess = function(event) {
   db = event.target.result;
 //  addmove(db, "e2", "e4");
-  changemove1(db, "e2", "e4");
+//  changemove1(db, move_1_w, move_1_b);
+  changemove1(db, "e3", "e4");
   readmove(db);
 };
 
