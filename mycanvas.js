@@ -1,6 +1,6 @@
 function getmoves(game) {
   var game = game;
-  return fetch('http://usernamea.pythonanywhere.com/hello/some')
+  return fetch('https://usernamea.pythonanywhere.com/hello/some')
   .then(response => response.json())
   .then(data => {
     return data[game];
