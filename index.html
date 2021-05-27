@@ -45,6 +45,7 @@
     </ul>
 </nav>
 
+  <!--  <div><a href="./dir/some.html">gothere</a></div> -->
 <main>
 <section>
   <header>    
@@ -248,29 +249,41 @@
 
 
 <p>
-  <button id="go-button">show game</button>
+		<button id="go-button">show game</button>
 </p>
-  </div>
+	</div>
+    <!--
+    <h1>Hi</h1>
+    <p>This is the body</p>
+    <p>This is a gist</p>
+    -->
+<!--
+<script src="https://gist.github.com/tt5/079e0418ed01c721c80cf3b18a268c17.js"></script>
+<script src="http://usernamea.pythonanywhere.com/hello/some"></script>
+
+-->
 
   </section>
   <section>
 
 <script src="https://gist.github.com/tt5/079e0418ed01c721c80cf3b18a268c17.js"></script>
 
+  <math><mrow><msup><mi mathvariant="italic"> some </mi><mtext mathvariant="italic">some</mtext></msup> <mo> + </mo>
+  <msup><mi> b </mi><mn>2</mn></msup> <mo> = </mo> <msup><mi> c
+  </mi><mn>2</mn></msup> </mrow> </math>
   <span id="one"></span>
   </section>
 </main>
 
-<!--
 <aside>
   <header>
 <h2>Aside</h2>
   </header>
   <ul>
-    <li><a href="./src/one.html">One</a></li>
+       <li><a href="./src/one.html">One</a></li>
   </ul>
 </aside>
--->
+
 
 </div>
 <footer>
@@ -284,45 +297,45 @@
 <script>
 /* Get into full screen */
 function GoInFullscreen(element) {
-  if(element.requestFullscreen)
-    element.requestFullscreen();
-  else if(element.mozRequestFullScreen)
-    element.mozRequestFullScreen();
-  else if(element.webkitRequestFullscreen)
-    element.webkitRequestFullscreen();
-  else if(element.msRequestFullscreen)
-    element.msRequestFullscreen();
+	if(element.requestFullscreen)
+		element.requestFullscreen();
+	else if(element.mozRequestFullScreen)
+		element.mozRequestFullScreen();
+	else if(element.webkitRequestFullscreen)
+		element.webkitRequestFullscreen();
+	else if(element.msRequestFullscreen)
+		element.msRequestFullscreen();
 }
 
 /* Get out of full screen */
 function GoOutFullscreen() {
-  if(document.exitFullscreen)
-    document.exitFullscreen();
-  else if(document.mozCancelFullScreen)
-    document.mozCancelFullScreen();
-  else if(document.webkitExitFullscreen)
-    document.webkitExitFullscreen();
-  else if(document.msExitFullscreen)
-    document.msExitFullscreen();
+	if(document.exitFullscreen)
+		document.exitFullscreen();
+	else if(document.mozCancelFullScreen)
+		document.mozCancelFullScreen();
+	else if(document.webkitExitFullscreen)
+		document.webkitExitFullscreen();
+	else if(document.msExitFullscreen)
+		document.msExitFullscreen();
 }
 
 
 /* Is currently in full screen or not */
 function IsFullScreenCurrently() {
 	var full_screen_element = document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement || null;
-  
-  // If no element is in full-screen
-  if(full_screen_element === null)
-    return false;
-  else
-    return true;
+	
+	// If no element is in full-screen
+	if(full_screen_element === null)
+		return false;
+	else
+		return true;
 }
 
 let gobutton = document.querySelector("#go-button");
 gobutton.addEventListener("click", function() {
-  if(IsFullScreenCurrently())
+	if(IsFullScreenCurrently())
       GoOutFullscreen();
-  else
+	else
       GoInFullscreen(document.querySelector("#fullboard"));
 });
 
@@ -345,7 +358,7 @@ canvasnames = [
   ];
 
 document.addEventListener('fullscreenchange', function() {
-  if(IsFullScreenCurrently()) {
+	if(IsFullScreenCurrently()) {
       let some1 = document.querySelector("#go-button")
       some1.innerHTML = 'exit fullscreen';
       let pieces = document.querySelector("#chesspieces")
@@ -362,8 +375,8 @@ document.addEventListener('fullscreenchange', function() {
 
       runcanvas();
 
-  }
-  else {
+	}
+	else {
       cancelAnimationFrame(loopid);
       let some1 = document.querySelector("#go-button")
       some1.innerHTML = 'show game';
@@ -374,7 +387,7 @@ document.addEventListener('fullscreenchange', function() {
         let canvas = document.querySelector(`${i}`)
         canvas.style.display = 'none';
       }
-  }
+	}
 });
 </script>
 </html>
