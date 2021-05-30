@@ -218,3 +218,7 @@ body .gist .highlight td {
 body .gist .gist-meta {
     display: none;
 }
+
+body .gist .markdown-body img {
+  background-color: black;
+}
